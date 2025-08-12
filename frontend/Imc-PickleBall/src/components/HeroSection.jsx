@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const HeroSection = () => {
+const HeroSection = ({ onOpenAvailability }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   
   // Your actual court images
   const courtImages = [
@@ -53,7 +54,6 @@ const HeroSection = () => {
       </span>
     </h1>
     
-    {/* REPLACE THIS LINE */}
     <p className="text-lg text-slate-600 flex items-center gap-2">
       📍 Chulna, Vasai West - Premium Indoor Facility
     </p>
@@ -72,9 +72,9 @@ const HeroSection = () => {
   </div>
   
   <div className="flex gap-4 items-center">
-  <button className="bg-slate-800 hover:bg-slate-900 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
-    🏓 Check Availability
-  </button>
+  <button onClick={onOpenAvailability} className="bg-slate-800 hover:bg-slate-900 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2" >
+🏓 Check Availability
+</button>
   
   <a 
     href="https://www.google.com/maps/place/Innocent+Memorial+Centre/@19.3818412,72.8073678,16.45z/data=!4m6!3m5!1s0x3be7af002197a051:0xec5bb1d2129a77c9!8m2!3d19.3806402!4d72.8082841!16s%2Fg%2F11lnjm41y8?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
